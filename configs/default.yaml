@@ -1,0 +1,16 @@
+seed: 42
+model_name: distilbert-base-uncased
+max_length: 256
+train_batch_size: 16
+eval_batch_size: 32
+num_train_epochs: 2
+learning_rate: 0.00002
+weight_decay: 0.01
+warmup_ratio: 0.06
+log_steps: 50
+save_strategy: "epoch"
+eval_strategy: "epoch"
+dataset_name: "imdb"
+output_dir: "artifacts/distilbert_imdb"
+# Use subset of data for faster training (0.1 = 10%, 1.0 = 100%)
+data_subset: 0.1
